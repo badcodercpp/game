@@ -35,11 +35,11 @@ class App extends Component {
 
   }
   componentDidMount(){
-    let nr=10;
-    let nc=10;
-    if (this.state.game_started) {
-      //let nr=this.state.__nr;
-      //let nc=this.state.__nc;
+    //let nr=10;
+    //let nc=10;
+    /*if (this.state.game_started) {
+      let nr=this.state.__nr;
+      let nc=this.state.__nc;
       alert(nr+","+nc)
       this._nr=nr;
       this._nc=nc;
@@ -51,7 +51,7 @@ class App extends Component {
         gameBoard:ret.arr,
         pos:ret.pos
       })
-    }
+    }*/
     document.addEventListener("keydown",(e=>{
       //console.log(e.keyCode)
       
@@ -177,14 +177,14 @@ class App extends Component {
           let r=prompt("Please enter number of rows");
           let c=prompt("Please enter number of columns");
           this.setState({
-            __nr:r,
-            __nc:c,
+            __nr:Number(r),
+            __nc:Number(c),
             game_open:true
           },()=>{
-            /*if (this.state.game_started) {
+            if (this.state.game_started) {
               let nr=this.state.__nr;
               let nc=this.state.__nc;
-              alert(nr+","+nc)
+              //alert(nr+","+nc)
               this._nr=nr;
               this._nc=nc;
               let lg=new Logic();
@@ -195,7 +195,7 @@ class App extends Component {
                 gameBoard:ret.arr,
                 pos:ret.pos
               })
-            }*/
+            }
           })
         } else {
           alert("please enter arrow key to start")

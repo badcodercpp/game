@@ -1,6 +1,6 @@
 export class Logic {
     create_logic=(nR,nC)=>{
-        alert(nR)
+        //alert(nR)
         this._nR=Number(nR);
         this._nC=Number(nC);
         let totalM=nR;
